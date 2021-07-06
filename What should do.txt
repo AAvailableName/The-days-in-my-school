@@ -1,0 +1,97 @@
+Classes:
+
+1.Frame      //this is the mainly class of all classes in this game
+
+2.NPC        //this is the abstract father class of Player and all the NPC
+3.NPCs       //this is the class extends NPC,some of them has their only story and word
+4.PlayerIO   //this is a interface of Player
+5.Player     //this is the Player class
+
+6.Thing      //this is the abstract father class of all things
+
+7.TriggerIO  //this is the condition's interface to make a Event
+8.EventIO    //this is the event's interface in the game
+
+9.Time       //this is the time in the game
+
+10.BGI       //this is the back ground image
+
+11.Music     //this is the music player
+12.BGM       //this is the back ground music
+
+
+Methods:
+
+1.Frame:
+    void paint(Graphics g)
+    void update()
+    void repaint()
+
+2.PlayerIO / Player:
+    void walk()
+    void jump()
+    void prowl()
+    void pick()
+    void run()
+    void attack()
+    
+3.Thing:
+    void stack()
+    
+4.TriggerIO:
+    void bindEvent()
+    void isConditionSpark(Event e){
+        e.eventOnSpark();
+    }
+    
+5.EventIO:
+    void eventOnSpark()
+    
+
+Variables:
+
+1.Frame:
+    int[][] map
+    int[][] showedMap
+    Player player
+    
+2.NPC / NPCs:
+public:
+    int hp
+    int sp
+    int san
+    int weight 
+    String name
+private:
+    int concentrate
+    int hunger
+    int likebility
+    String State
+    
+3.PlayerIO / Player:
+public:
+    int hp
+    int sp
+    int san
+    int weight  
+    String name 
+private:
+    int health
+    int concentrate
+    int hunger
+    int likebility = 0 //unuseful
+    String viewType
+    String State   
+
+4.Thing:
+    String name
+    int num
+    int weight
+    
+5.BGI(BackGroundImage):
+    Image img
+    Thing thing
+    
+5.BGM(BackGroundMusic):
+    Music music
+    Thing thing    
